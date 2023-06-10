@@ -25,6 +25,8 @@
 
       const spriteWidth = 575;
       const spriteHeight = 523;
+
+      let playerState = "run";
       
       let gameFrame = 0;
       const staggerFrames = 5;
@@ -92,9 +94,9 @@
 
       function animate(){
         ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-        let position = Math.floor(gameFrame / staggerFrames) % spriteAnimations["sit"].loc.length;
+        let position = Math.floor(gameFrame / staggerFrames) % spriteAnimations[playerState].loc.length;
         let frameX = spriteWidth * position;
-        let frameY = spriteAnimations["sit"].loc[position].y;
+        let frameY = spriteAnimations[playerState].loc[position].y;
 
         ctx.drawImage(playerImage, frameX, frameY, spriteWidth, spriteHeight, 0, 0, spriteWidth, spriteHeight);
 
