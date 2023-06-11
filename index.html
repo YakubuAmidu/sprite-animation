@@ -7,6 +7,30 @@
     <link rel="icon" type="img/x-con" href="img/dog.png">
     <link rel="stylesheet" href="style.css">
     <title>Sprite animation</title>
+
+    <style>
+        #canvas1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+        };
+
+        .controls {
+            position: absolute;
+            z-index: 10;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        };
+
+        .controls, select, option {
+            font-size: 25px;
+        }
+    </style>
+
 </head>
 <body>
     <canvas id="canvas1"></canvas>
@@ -20,10 +44,10 @@
             <option value="idle">Run</option>
             <option value="idle">Dizzy</option>
             <option value="idle">Sit</option>
-            <option id="idle">Roll</option>
-            <option id="idle">Bite</option>
-            <option id="idle">Ko</option>
-            <option id="idle">GetHit</option>
+            <option value="idle">Roll</option>
+            <option value="idle">Bite</option>
+            <option value="idle">Ko</option>
+            <option value="idle">GetHit</option>
         </select>
     </div>
 
