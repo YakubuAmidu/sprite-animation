@@ -9,7 +9,7 @@
     <title>Sprite animation</title>
 
     <style>
-        #canvas1 {
+        #canvas1{
             position: absolute;
             top: 50%;
             left: 50%;
@@ -39,21 +39,21 @@
         <label for="animations">Choose animation:</label>
         <select id="animations" name="animations">
             <option value="idle">Idle</option>
-            <option value="idle">Jump</option>
-            <option value="idle">Fall</option>
-            <option value="idle">Run</option>
-            <option value="idle">Dizzy</option>
-            <option value="idle">Sit</option>
-            <option value="idle">Roll</option>
-            <option value="idle">Bite</option>
-            <option value="idle">Ko</option>
-            <option value="idle">GetHit</option>
+            <option value="jump">Jump</option>
+            <option value="fall">Fall</option>
+            <option value="run">Run</option>
+            <option value="dizzy">Dizzy</option>
+            <option value="sit">Sit</option>
+            <option value="roll">Roll</option>
+            <option value="bite">Bite</option>
+            <option value="ko">Ko</option>
+            <option value="getHit">GetHit</option>
         </select>
     </div>
 
     <script>
 
-      let playerState = "fall";
+      let playerState = "idle";
       const dropdown = document.getElementById('animations');
       dropdown.addEventListener('change', function(e){
         playerState = e.target.value;
